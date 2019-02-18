@@ -7,13 +7,7 @@
 </head>
 <body>
 	<div id="app">
-
-		<img 
-			v-bind:src = "background.src"
-			v-bind:alt = "background.alt"
-			v-bind:width = "background.width"
-			v-bind:height = "background.height"
-		>
+		<img v-bind = "item" v-bind:id = "'thumb-' + item.id">
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
