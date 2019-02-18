@@ -7,13 +7,13 @@
 </head>
 <body>
 	<div id="app">
-		<p v-bind:class="classObject">Text</p>
-		<p v-bind:style="styleObject">Text</p>
-<!--
-	以下のようになる 
-		<p class="child">Text</p> 
-		<p style="color: red; background-color: lightgray;">Text</p>
--->
+
+		<img 
+			v-bind:src = "background.src"
+			v-bind:alt = "background.alt"
+			v-bind:width = "background.width"
+			v-bind:height = "background.height"
+		>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
