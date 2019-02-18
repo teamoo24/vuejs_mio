@@ -3,11 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Vue.js App</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<div id="app">
-		<button v-on:click="handleClick">Click</button>
+		<button v-on:click="show=!show">切り替え</button>
+		<transition>
+			<p v-if="show">aaaaaa</p>
+		</transition>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
