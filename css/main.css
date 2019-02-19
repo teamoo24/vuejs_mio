@@ -5,3 +5,7 @@
 .v-enter, .v-leave-to {
 	opacity: 0;
 }
+
+.tuyoi {
+	color: red;
+}
