@@ -7,17 +7,6 @@
 </head>
 <body>
 	<div id="app">
-		<!-- このフォームの入力値を新しいモンスターに使う -->
-		名前<input v-model="name">
-		<button v-on:click="doAdd">モンスターを追加</button>
-		<ul>
-			<li v-for="(item,index) in list" v-bind:key="item.id" v-bind:class="{tuyoi:item.hp > 300}" v-if="item.hp">
-				ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-				<!-- 削除ボタンをv-for内に作成 -->
-				<span v-if="item.hp < 50">瀕死</span>
-				<button v-on:click="attack(index)">攻撃</button>
-			</li>
-		</ul>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
