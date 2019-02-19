@@ -7,25 +7,11 @@
 </head>
 <body>
 	<div id="app">
+		<!-- このフォームの入力値を新しいモンスターに使う -->
+		名前<input v-model="name">
+		<button v-on:click="doAdd">モンスターを追加</button>
 		<ul>
 			<li v-for="item in list" v-bind:key="item.id" v-bind:class="{tuyoi:item.hp > 300}">
-				<!-- 
-					
-v-bind:class の使い方
-
-v-bind:class='{classA: 式, classB: 式}' という形で指定します.
-
-式の評価結果が true か false かに応じて key に指定しているクラスの on/off を切り替えることができます.
-
-今回のサンプルでは, v-bind:class='{active:isActive}' と指定しているので isActive の値に応じて .active クラスの on/off が切り替わります.
-
-更に今回のサンプルでは, v-on:click='isActive=!isActive' でクリックするたびに isActive フラグを toggle させています.
-
-クリックするたびに見た目が 非アクティブ/アクティブ に切り替わるのが分かるかと思います.
-
-ちなみに v-bind の部分は省略可能です! 
-				
-				-->
 				ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
 				<span v-if="item.hp > 300">つよい！</span>
 			</li>
