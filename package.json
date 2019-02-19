@@ -1,0 +1,23 @@
+{
+  "name": "sample",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamoo24/vuejs_mio.git"
+  },
+  "author": "han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamoo24/vuejs_mio/issues"
+  },
+  "homepage": "https://github.com/teamoo24/vuejs_mio#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
