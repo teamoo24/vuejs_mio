@@ -11,10 +11,11 @@
 		名前<input v-model="name">
 		<button v-on:click="doAdd">モンスターを追加</button>
 		<ul>
-			<li v-for="item in list" v-bind:key="item.id" v-bind:class="{tuyoi:item.hp > 300}">
+			<li v-for="(item,index) in list" v-bind:key="item.id" v-bind:class="{tuyoi:item.hp > 300}" v-if="item.hp">
 				ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
 				<!-- 削除ボタンをv-for内に作成 -->
-				<button v-on:click="doRemove(index)">モンスターを削除</button>
+				<span v-if="item.hp < 50">瀕死</span>
+				<button v-on:click="attack(index)">攻撃</button>
 			</li>
 		</ul>
 	</div>
