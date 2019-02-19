@@ -7,12 +7,6 @@
 </head>
 <body>
 	<div id="app">
-		<ul>
-			<li v-for="(item,index) in list" v-bind:key="item.id">
-				ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-				<!-- 削除ボタンをv-for内に作成 -->
-			</li>
-		</ul>
 	</div>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
