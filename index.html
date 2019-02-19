@@ -13,7 +13,8 @@
 		<ul>
 			<li v-for="item in list" v-bind:key="item.id" v-bind:class="{tuyoi:item.hp > 300}">
 				ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-				<span v-if="item.hp > 300">つよい！</span>
+				<!-- 削除ボタンをv-for内に作成 -->
+				<button v-on:click="doRemove(index)">モンスターを削除</button>
 			</li>
 		</ul>
 	</div>
