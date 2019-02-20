@@ -7,19 +7,14 @@
 </head>
 <body>
 	<div id="app">
-		<span v-text = "message"></span>
-		<br>
-		<input :value="message" @input="handleInput">
-		<!-- 
-			イベント修飾子
-			.stop : event.stopPropagation()を呼ぶ
-			.prevent : event.preventDefault()を呼ぶ
-			.capture : キャプチャモードでDOMイベントをハンドル
-			.self : イベントがこの要素から発火した時のみハンドラを呼び出す　
-			.native : コンポーネントのルート要素上のネイティブイベントをハンドルする
-			.once : 最大1回ハンドラを呼び出す
-			.passive : {passive: true}でDOMイベントをハンドルする。
-		-->
+		<div v-on:click.right="handler">example</div>
+		<!-- 右ボタンを押した時のコンテキストメニューを表示させない -->
+		<!-- クリックイベント
+			.left : マウスの左ボタンが押された時のみハンドラを呼び出す
+			.right : マウスの右ボタンが押された時のみハンドラを呼び出す
+			.middle : マウスの中央ボタンが押された時のみハンドラを呼び出す
+		 -->
+		<div v-on:click.right.prevent="handler">example</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
