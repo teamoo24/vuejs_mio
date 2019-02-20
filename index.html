@@ -7,8 +7,15 @@
 </head>
 <body>
 	<div id="app">
-		<button @click="handleClick">Click</button>
-		<!-- <button v-on:click="handleClick">Click</button>と同じ -->
+		<div v-on:click="handleClick">
+			クリック
+		</div>
+		<div v-on:scroll="handleScroll">
+			スクロール
+		</div>
+		<div v-on:mousewheel="handleWheel">
+			フィール
+		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
