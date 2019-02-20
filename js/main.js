@@ -2,7 +2,7 @@
 var app = new Vue({
 	el:'#app',
 	data:{
-		preview:''
+		val:50
 	},
 	methods: {
 		handleChange: function(event) {
