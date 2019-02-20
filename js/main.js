@@ -2,7 +2,11 @@
 var app = new Vue({
 	el:'#app',
 	data:{
-		message : "aaaa",
-		url : "js/list.json"
+		message : "Hello<strong>Vue.js!</strong>",
+	},
+	methods:{
+		handleClick: function(){
+			alert('クリックしたよ')
+		}
 	}
 })
