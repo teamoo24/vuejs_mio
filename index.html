@@ -7,14 +7,15 @@
 </head>
 <body>
 	<div id="app">
-		<div v-on:click.right="handler">example</div>
-		<!-- 右ボタンを押した時のコンテキストメニューを表示させない -->
-		<!-- クリックイベント
-			.left : マウスの左ボタンが押された時のみハンドラを呼び出す
-			.right : マウスの右ボタンが押された時のみハンドラを呼び出す
-			.middle : マウスの中央ボタンが押された時のみハンドラを呼び出す
+		<div v-on:click="handler('div1')">
+			div1
+			<a href="#top" v-on:click.prevent="handler('div2')">div2</a>
+		</div>
+		<!-- 
+		結果
+			div2
+			div1
 		 -->
-		<div v-on:click.right.prevent="handler">example</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
