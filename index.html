@@ -7,8 +7,8 @@
 </head>
 <body>
 	<div id="app">
-		<p ref="hello">Hello</p>
-		<!-- p要素にhelloと言う名前を付けた -->
+		<a v-bind:href="url" v-pre>Hello {{message}}</a>
+		<!-- 普通ならhello aaaaに表示されるがv-preを設定した場合そのままHello {{message}}と表示される -->
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
