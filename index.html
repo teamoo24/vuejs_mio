@@ -7,15 +7,19 @@
 </head>
 <body>
 	<div id="app">
-		<div v-on:click="handleClick">
-			クリック
-		</div>
-		<div v-on:scroll="handleScroll">
-			スクロール
-		</div>
-		<div v-on:mousewheel="handleWheel">
-			フィール
-		</div>
+		<span v-text = "message"></span>
+		<br>
+		<input :value="message" @input="handleInput">
+		<!-- 
+			イベント修飾子
+			.stop : event.stopPropagation()を呼ぶ
+			.prevent : event.preventDefault()を呼ぶ
+			.capture : キャプチャモードでDOMイベントをハンドル
+			.self : イベントがこの要素から発火した時のみハンドラを呼び出す　
+			.native : コンポーネントのルート要素上のネイティブイベントをハンドルする
+			.once : 最大1回ハンドラを呼び出す
+			.passive : {passive: true}でDOMイベントをハンドルする。
+		-->
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
 	<script src="js/main.js"></script>
